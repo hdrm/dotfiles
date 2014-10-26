@@ -19,4 +19,4 @@ termcapinfo xterm|xterms|xs|rxvt ti@:te@
 term screen-256color
 
 hardstatus alwayslastline
-hardstatus string '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c'
+hardstatus string '%{= m}Load Avg:%{= G} %l %= %{= w}%-w%{+b r}%n:%t%{-b r}%{w}%+w %= %{b}%D %d/%m/%Y %{Y}%c:%s'
