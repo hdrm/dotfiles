@@ -72,3 +72,5 @@ if ! shopt -oq posix ; then
         . /etc/bash_completion
     fi
 fi
+
+PATH=$PATH:$HOME/bin:$HOME/local/bin
