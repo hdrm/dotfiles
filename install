@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# ~/.bashrc
+# ~/.nanorc
+# ~/.screenrc
+
+for x in bashrc nanorc ; do
+    ln -fs "$(pwd)/.${x}" ~
+done
+
+# Screen configuration
+if [ "$(uname -o)" == "GNU/Linux" ] ; then
+    ln -fs "$(pwd)/.screenrc" ~
+elif [ "$(uname -o)" == "Cygwin" ] ; then
+    ln -fs "$(pwd)/.screenrc.cygwin" ~/.screenrc
+fi
