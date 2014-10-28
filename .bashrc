@@ -61,6 +61,7 @@ if [ -x /usr/bin/dircolors ] ; then
     alias grep='grep --color=auto'
 
     alias less='less -r'
+    alias lsa='ls -Al'
     alias mount='mount | column -t'
 fi
 
