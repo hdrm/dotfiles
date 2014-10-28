@@ -14,8 +14,10 @@ HISTSIZE=1000
 
 shopt -s cdspell
 shopt -s checkwinsize
+shopt -s dotglob
 shopt -s globstar
 shopt -s histappend
+shopt -s nocaseglob
 
 case "$TERM" in
     xterm-color)
@@ -59,6 +61,7 @@ if [ -x /usr/bin/dircolors ] ; then
     alias grep='grep --color=auto'
 
     alias less='less -r'
+    alias mount='mount | column -t'
 fi
 
 if [ -f ~/.bash_aliases ] ; then
@@ -74,3 +77,6 @@ if ! shopt -oq posix ; then
 fi
 
 PATH=$PATH:$HOME/bin:$HOME/local/bin
+
+export EDITOR=nano
+export PAGER=less
