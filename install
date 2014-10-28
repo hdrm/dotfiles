@@ -4,11 +4,11 @@ for x in bash_logout bashrc gitconfig nanorc profile ; do
     ln -fs "$(pwd)/.${x}" ~
 done
 
-# Screen configuration
-if [ "$(uname -o)" == "GNU/Linux" ] ; then
-    ln -fs "$(pwd)/.screenrc" ~
-elif [ "$(uname -o)" == "Cygwin" ] ; then
-    ln -fs "$(pwd)/.inputrc" ~/.inputrc
-    ln -fs "$(pwd)/.minttyrc" ~/.minttyrc
+# Cygwin
+if [ "$(uname -o)" == "Cygwin" ] ; then
+    ln -fs "$(pwd)/.inputrc.cygwin" ~/.inputrc
+    ln -fs "$(pwd)/.minttyrc.cygwin" ~/.minttyrc
     ln -fs "$(pwd)/.screenrc.cygwin" ~/.screenrc
+else
+    ln -fs "$(pwd)/.screenrc" ~/.screenrc
 fi
