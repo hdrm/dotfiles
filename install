@@ -1,10 +1,13 @@
 #!/bin/bash
 
 # ~/.bashrc
+# ~/.gitconfig
+# ~/.inputrc
+# ~/.minttyrc
 # ~/.nanorc
 # ~/.screenrc
 
-for x in bashrc nanorc ; do
+for x in bashrc gitconfig nanorc ; do
     ln -fs "$(pwd)/.${x}" ~
 done
 
@@ -12,5 +15,7 @@ done
 if [ "$(uname -o)" == "GNU/Linux" ] ; then
     ln -fs "$(pwd)/.screenrc" ~
 elif [ "$(uname -o)" == "Cygwin" ] ; then
+    ln -fs "$(pwd)/.inputrc" ~/.inputrc
+    ln -fs "$(pwd)/.minttyrc" ~/.minttyrc
     ln -fs "$(pwd)/.screenrc.cygwin" ~/.screenrc
 fi
