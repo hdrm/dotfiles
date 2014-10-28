@@ -1,13 +1,6 @@
 #!/bin/bash
 
-# ~/.bashrc
-# ~/.gitconfig
-# ~/.inputrc
-# ~/.minttyrc
-# ~/.nanorc
-# ~/.screenrc
-
-for x in bashrc gitconfig nanorc ; do
+for x in bash_logout bashrc gitconfig nanorc profile ; do
     ln -fs "$(pwd)/.${x}" ~
 done
 
